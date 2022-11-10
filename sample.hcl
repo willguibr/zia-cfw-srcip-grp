@@ -23,7 +23,7 @@ consul {
 }
 
 # Terraform Driver Options
-driver "terraform" {
+driver "terraform-cloud" {
   hostname = "app.terraform.io"
   organization = "BD-SA-Zscaler"
   token = "{{ with secret \"zscaler/ziacloud\" }}{{ .Data.data.token }}{{ end }}"
