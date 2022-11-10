@@ -24,6 +24,9 @@ consul {
 
 # Terraform Driver Options
 driver "terraform" {
+  hostname = "app.terraform.io"
+  organization = "BD-SA-Zscaler"
+  token = "{{ with secret \"zscaler/ziacloud\" }}{{ .Data.data.token }}{{ end }}"
   log = true
   required_providers {
     zia = {
