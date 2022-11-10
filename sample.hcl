@@ -1,5 +1,5 @@
 # Global Config Options
-log_level = "INFO"
+log_level   = "DEBUG"
 port = 8558
 # working_dir = "sync-tasks"
 
@@ -27,12 +27,6 @@ driver "terraform-cloud" {
   hostname = "app.terraform.io"
   organization = "BD-SA-Zscaler"
   token = "{{ with secret \"zscaler/ziacloud\" }}{{ .Data.data.token }}{{ end }}"
-  log = true
-  required_providers {
-    zia = {
-      source = "zscaler/zia"
-    }
-  }
 }
 
 ################################################################################
