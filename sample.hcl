@@ -19,7 +19,7 @@ vault {}
 
 # Consul Config Options
 consul {
-  address = "172.31.1.71:8500"
+  address = "172.31.1.237:8500"
 }
 
 # Terraform Driver Options
